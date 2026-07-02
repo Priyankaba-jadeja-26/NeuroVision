@@ -7,7 +7,7 @@ import { PageHeader, PageShell, SimulationBadge } from "@/components/page-shell"
 import { Check, Coffee, Droplet, Eye, Sun, Timer } from "lucide-react";
 
 export const Route = createFileRoute("/recommendations")({
-  component: Recommendations;
+  component: Recommendations,
 });
 
 const routines = [
