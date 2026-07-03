@@ -21,13 +21,13 @@ import {
 import { AreaChart, Area, ResponsiveContainer, XAxis, YAxis, Tooltip } from "recharts";
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 
 export const Route = createFileRoute("/")({
   component: Home,
 });
 
-function greet() {
-  const h = new Date().getHours();
+function greetFor(h: number) {
   if (h < 12) return "Good morning";
   if (h < 18) return "Good afternoon";
   return "Good evening";
@@ -39,12 +39,16 @@ function Home() {
   const daily = dailyAggregates(dataset.rows).slice(-14);
   const insights = generateInsights(scores);
   const top = insights[0];
+  const [greeting, setGreeting] = useState("Hello");
+  useEffect(() => {
+    setGreeting(greetFor(new Date().getHours()));
+  }, []);
 
   return (
     <PageShell>
       <PageHeader
         eyebrow="NeuroVision · Home"
-        title={`${greet()}, Alex`}
+        title={`${greeting}, Alex`}
         subtitle="Your visual system, cognitive load and screen habits — synthesized from your NeuroVision Smart Spectacles session data."
         right={<SimulationBadge />}
       />
