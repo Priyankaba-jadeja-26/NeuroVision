@@ -72,18 +72,18 @@ function Settings() {
               <Eye className="h-5 w-5 text-primary" />
             </div>
             <div>
-              <div className="font-display text-xl">Alex Morgan</div>
+              <div className="font-display text-xl">Priyankaba Jadeja</div>
               <div className="text-xs text-muted-foreground">Member since May 2026</div>
             </div>
           </div>
           <div className="space-y-3">
             <div>
               <Label className="text-xs text-muted-foreground">Display name</Label>
-              <Input defaultValue="Alex Morgan" className="mt-1.5 bg-background/60" />
+              <Input defaultValue="Priyankaba Jadeja" className="mt-1.5 bg-background/60" />
             </div>
             <div>
               <Label className="text-xs text-muted-foreground">Email</Label>
-              <Input defaultValue="alex@neurovision.ai" className="mt-1.5 bg-background/60" />
+              <Input defaultValue="priyankaba@neurovision.ai" className="mt-1.5 bg-background/60" />
             </div>
           </div>
         </GlassCard>
