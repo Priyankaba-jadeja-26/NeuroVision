@@ -48,7 +48,7 @@ function Home() {
     <PageShell>
       <PageHeader
         eyebrow="NeuroVision · Home"
-        title={`${greeting}, Alex`}
+        title={`${greeting}, Priyankaba`}
         subtitle="Your visual system, cognitive load and screen habits — synthesized from your NeuroVision Smart Spectacles session data."
         right={<SimulationBadge />}
       />
